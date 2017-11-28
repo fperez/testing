@@ -18,4 +18,4 @@ install:
   - source activate test-environment
 
 script:
-  - pytest
+  - pytest tests.py
