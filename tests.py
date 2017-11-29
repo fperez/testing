@@ -1,3 +1,6 @@
+import numpy as np
+import numpy.testing as npt
+
 from mymean import mean
 
 def test_mean():
@@ -36,6 +39,9 @@ def test_complex():
     exp = NotImplemented
     assert obs == exp
 
-
-def test_broken():
-    1/0
+def test_numpy():
+    "Test against numpy's mean with a reasonably large array"
+    npr = np.random.uniform(size=10_000)
+    npm = npr.mean()
+    mym = mean(npr)
+    npt.assert_allclose(mym, npm, rtol=1e-12)
