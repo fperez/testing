@@ -1,0 +1,3 @@
+# mean business [![Build Status](https://travis-ci.org/fperez/testing.svg?branch=master)](https://travis-ci.org/fperez/testing)
+
+where in we think about means...
